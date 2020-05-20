@@ -21,7 +21,7 @@ while True:
     frame_gray_cropped= frame_gray[y-offset:y+h+offset,x-offset:x+w+offset]
     face_to_save=cv2.resize(frame_gray_cropped,(100,100))
     ctr=ctr+1
-    if ctr%10==0:
+    if ctr%10==0:                        #Storing every 10th frame from webcam video Stream
         face_data.append(face_to_save)
         print(len(face_data)," saved")
     cv2.imshow('frame rgb',frame)
